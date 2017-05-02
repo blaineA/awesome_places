@@ -1,0 +1,39 @@
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onAddItem(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Title</ion-label>
+        <ion-input
+          type="text"
+          name="title"
+          placeholder="Beautiful Church"
+          ngModel
+          required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Short Description</ion-label>
+        <ion-input
+          type="text"
+          name="description"
+          placeholder="2"
+          ngModel
+          required></ion-input>
+      </ion-item>
+    </ion-list>
+    <button
+      ion-button block outline
+      type="button"
+      (click)="onLocate()"
+      <ion-icon name= "locate">Locate Me</ion-icon>
+      </button>
+    <button
+        ion-button block outline
+        type="button"
+        (click)="onOpenMap()"
+        <ion-icon name= "Map">Select on Map</ion-icon>
+    </button>
+
+    
+
+  </form>
+</ion-content>
